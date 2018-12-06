@@ -552,7 +552,7 @@ $edit_event_form .="</select><div id='cat-notif' class='notif'></div></td></tr>
 				<tr><td>Deskripsi <span class='asterisk'>*</span></td><td> : </td><td><textarea name='deskripsi'>".$infouser[9]."</textarea><div id='deskripsi-notif' class='notif'></div></td></tr>
 				<tr><td align='left'><span class='asterisk'>* wajib diisi</span></td><td></td><td align='right'><input type='button' id='add_eve_btn' value='Tambahkan' /></td></tr>
 				</table>
-				</form><div class='button1'><a href='index.php?action=show-organisasi'>Kembali</a></div>";
+				</form><div class='button1'><a href='index.php?action=show-event'>Kembali</a></div>";
 }
 
 
@@ -677,8 +677,13 @@ case 'show':
 			<tr><td>Sifat</td><td>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;</td><td>".$hasil[8]."</td></tr>
 			<tr><td>Jumlah Pendaftar</td><td>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;</td><td>".$hasil[11]."</td></tr>";
 			$querycat = pg_fetch_row(pg_query("select nama from kategori_event where nomor='$hasil[10]'"));
-			$show.="<tr><td>Kategori</td><td>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;</td><td>".$querycat[0]."</td></tr>";
-			$show .="<tr><td colspan='3'><br /><b>Deskripsi:</b><br />".$hasil[9]."</td></tr></table>
+			$show.="<tr><td>Kategori</td><td>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;</td><td>".$querycat[0]."</td></tr>
+			<tr><td>Pengisi Acara</td><td>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;</td><td>";
+			$querypa = pg_query("select nama_pengisi_acara from pengisi_acara where id_event='$id' and id_pembuat_event='$hasil[1]'");
+			while($hasilpa=pg_fetch_row($querypa)){
+				$show.=$hasilpa[0]."<br />";
+			}
+			$show .="</td></tr><tr><td colspan='3'><br /><b>Deskripsi:</b><br />".$hasil[9]."</td></tr></table>
 			<br /><br />
 			</div><a href='index.php?action=show-".$back."'>Kembali</a></div>";
 			} else{
