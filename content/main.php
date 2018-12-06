@@ -258,7 +258,7 @@ case 'login':
 							if($checkadmin > 0){
 									$_SESSION['login'] = 1;
 									$_SESSION['role'] = "admin";
-									$_SESSION['id'] = "Admin";
+									$_SESSION['id'] = $username;
 									$_SESSION['uid'] = $username;
 									$_SESSION['email'] = ""; 
 							} else {
