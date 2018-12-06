@@ -1,0 +1,89 @@
+.cust_center{
+	text-align: center;
+}
+
+body{
+text-align:center;
+}
+#header{
+width:100%;
+font-size:24px;
+margin:0px auto;
+}
+.mainmenu_item{
+padding:20px;
+border:1px solid #ccc;
+}
+.item-wrapper{
+text-align:left;
+}
+.custom-form{
+	text-align:left;
+margin:0px auto;
+}
+
+.custom-form td{
+	padding:10px;
+	
+}
+
+.custom-form [type~="text"], .custom-form [type~="textarea"], .custom-form [type~="password"]{
+	width:298px;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	height:35px;
+}
+.custom-form textarea{
+	width:298px;
+	height:200px;
+}
+
+.custom-form-no-border td{
+	padding:10px;
+	border:none;
+}
+
+.button2{
+	border:1px solid #ccc;
+	background:#f7f7f7;
+	border-radius:5px;
+	width:200px;
+}
+.button-prime{
+	border:1px solid #ccc;
+	color:#fff;
+	border-radius:5px;
+	width:200px;
+	background:#005e9f;
+	cursor:pointer;
+}
+.button-prime a, .button-prime a:hover, .button-prime a:visited {
+	color:#fff;
+}
+.asterisk{
+color:red;
+}
+.no-border {
+	border:none;
+}
+
+.form-wrapper{
+	text-align:center;
+	margin:0px auto;
+}
+.notif{
+	font-size:9px;
+	background:#f6f996;
+}
+.seleksi{
+	margin:0px auto;
+	text-align:center;
+}
+.home-panel{
+	border:1px solid #ccc;
+	width:300px;
+	text-align:center;
+	margin:10px;
+	padding:10px;
+	border-radius:20px;
+}
