@@ -610,7 +610,7 @@ $add_kepanitiaan_form .= "</select><div id='nama-notif' class='notif'></div></td
 					$add_kepanitiaan_form .="<option value='".$cat_result[0]."'>".$cat_result[0]."</option>";
 				}
 $add_kepanitiaan_form .= "</select><div id='cat-notif' class='notif'></div></td></tr>
-				<tr><td>Logo</td><td>: </td><td><input type='file' name='poster' /><div id='logo-notif' class='notif'></div></td></tr>
+				<tr><td>Logo</td><td>: </td><td><input type='file' name='logo' /><div id='logo-notif' class='notif'></div></td></tr>
 				<tr><td>Deskripsi <span class='asterisk'>*</span></td><td> : </td><td><textarea name='deskripsi'></textarea><div id='desc-notif' class='notif'></div></td></tr>
 				<tr><td align='left'><span class='asterisk'>* wajib diisi</span></td><td></td><td align='right'><input type='submit' id='add-pan' value='Tambahkan' /></td></tr>
 				</table>
